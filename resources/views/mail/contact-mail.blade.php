@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ciao {{$nome}}</h1>
+    <h1>ciao {{$name}}</h1>
     <h1>la tua richiesta è stata inviata correttamente</h1>
 </body>
 </html>

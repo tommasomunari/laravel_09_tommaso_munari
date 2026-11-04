@@ -4,9 +4,9 @@
             <div class="col-12 header-homepage">
                 <h1>Ciao</h1>
             </div>
-            @if(session('messaggio'))
+            @if(session('message'))
                 <div class="div-custom">
-                    {{session('messaggio')}}
+                    {{session('message')}}
                 </div>
             @endif
         </div>

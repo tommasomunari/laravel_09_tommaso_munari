@@ -9,7 +9,7 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-    <div class="header-principale">
+    <div class="main-header">
         {{$slot}}
     </div>
 </body>

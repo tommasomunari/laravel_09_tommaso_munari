@@ -1,6 +1,6 @@
 <nav class="navbar navbar-custom navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="{{route('homepage')}}">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,10 +10,7 @@
           <a class="nav-link" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('pagina.contattaci')}}">Contattaci</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="{{route('contactUs')}}">Contattaci</a>
         </li>
       </ul>
     </div>

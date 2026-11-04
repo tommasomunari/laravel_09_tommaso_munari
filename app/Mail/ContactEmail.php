@@ -11,21 +11,21 @@ use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Address;
 
-class ContattoEmail extends Mailable
+class ContactEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $nome, $cognome, $email, $testo;
+    public $name, $surname, $email, $text;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($nome, $cognome, $email, $testo)
+    public function __construct($name, $surname, $email, $text)
     {
-        $this->nome = $nome;
-        $this->cognome = $cognome;
+        $this->name = $name;
+        $this->surname= $surname;
         $this->email = $email;
-        $this->testo = $testo;
+        $this->text = $text;
     }
 
     /**
@@ -45,7 +45,7 @@ class ContattoEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.contattaci-mail',
+            view: 'mail.contact-mail',
         );
     }
 

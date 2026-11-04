@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrimoController;
+use App\Http\Controllers\FirstController;
 
-Route::get('/', [PrimoController::class, 'homepage'])->name('homepage');
+Route::get('/', [FirstController::class, 'homepage'])->name('homepage');
 
-Route::get('/scrivici', [PrimoController::class, 'contattaci'])->name('pagina.contattaci');
+Route::get('/message', [FirstController::class, 'contact'])->name('contactUs');
 
-Route::post('/scrivici/inviato', [PrimoController::class, 'inviato'])->name('pagina.inviato');
+Route::post('/message/sent', [FirstController::class, 'sent'])->name('messageSent');
