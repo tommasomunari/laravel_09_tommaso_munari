@@ -12,3 +12,5 @@ Route::post('/message/sent', [FirstController::class, 'sent'])->name('messageSen
 Route::get('/person/create', [FirstController::class, 'create'])->name('createPerson');
 
 Route::post('/person/submit', [FirstController::class, 'store'])->name('submitPerson');
+
+Route::get('/person/all', [FirstController::class, 'all'])->name('allPerson');

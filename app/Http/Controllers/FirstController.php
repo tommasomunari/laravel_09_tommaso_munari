@@ -27,6 +27,11 @@ class FirstController extends Controller
         return redirect()->route('homepage')->with('message', 'richiesta inviata corretamente');
     }
 
+    public function all(){
+        $persons = Person::all();
+        return view ('allperson', ['persons' => $persons]);
+    }
+
     public function create(){
         return view ('person');
     }
@@ -37,6 +42,7 @@ class FirstController extends Controller
             'surname' => $request->surname,
             'age' => $request->age,
         ]);
-        return redirect()->route('homepage');
+        return redirect()->route('allPerson');
     }
+
 };
