@@ -32,11 +32,11 @@ class FirstController extends Controller
     }
 
     public function store(Request $request){
-        $person = new Person();
-        $person->name = $request->name;
-        $person->surname = $request->surname;
-        $person->age = $request->age;
-        $person->save();
-
-    };
+        $person = Person::create([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'age' => $request->age,
+        ]);
+        return redirect()->route('homepage');
+    }
 };

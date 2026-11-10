@@ -12,7 +12,7 @@
             </div>
             <div class="mb-3">
                 <label for="age" class="form-label">Età</label>
-                <input type="text" name="age" class="form-control" id="age">
+                <input type="number" name="age" class="form-control" id="age">
             </div>
             
             <button type="submit" class="btn btn-primary">Invia i tuoi dati</button>
