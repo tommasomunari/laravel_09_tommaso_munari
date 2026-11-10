@@ -5,9 +5,9 @@
                 <h1>Ciao</h1>
             </div>
             @if(session('message'))
-                <div class="div-custom">
-                    {{session('message')}}
-                </div>
+            <div class="div-custom">
+                {{session('message')}}
+            </div>
             @endif
         </div>
     </div>

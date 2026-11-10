@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ContactEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Person;
 
 
 class FirstController extends Controller
@@ -25,4 +26,17 @@ class FirstController extends Controller
         Mail::to($email)->send(new ContactEmail($name, $surname, $email, $text));
         return redirect()->route('homepage')->with('message', 'richiesta inviata corretamente');
     }
-}
+
+    public function create(){
+        return view ('person');
+    }
+
+    public function store(Request $request){
+        $person = new Person();
+        $person->name = $request->name;
+        $person->surname = $request->surname;
+        $person->age = $request->age;
+        $person->save();
+
+    };
+};
